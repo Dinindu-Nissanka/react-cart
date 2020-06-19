@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 import reducer from "./reducers";
-import { getAllProducts } from "./actions";
+import { getAllProducts, getAllOrders } from "./actions";
 import App from "./containers/App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,6 +17,8 @@ if (process.env.NODE_ENV !== "production") {
 const store = createStore(reducer, applyMiddleware(...middleware));
 
 store.dispatch(getAllProducts());
+
+store.dispatch(getAllOrders());
 
 render(
   <Provider store={store}>

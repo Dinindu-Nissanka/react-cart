@@ -26,6 +26,8 @@ const products = (state, action) => {
 const byId = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_PRODUCTS:
+      console.log(action);
+      console.log(state);
       return {
         ...state,
         ...action.products.reduce((obj, product) => {

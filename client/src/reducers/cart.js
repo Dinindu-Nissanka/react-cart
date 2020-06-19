@@ -3,6 +3,7 @@ import {
   REMOVE_FROM_CART,
   CHECKOUT_REQUEST,
   CHECKOUT_FAILURE,
+  CHECKOUT_SUCCESS,
 } from "../constants/ActionTypes";
 
 const initialState = {
@@ -35,6 +36,11 @@ const productList = (state = initialState, action) => {
       removedState.quantityById[action.productId] =
         removedState.quantityById[action.productId] - 1;
       return removedState;
+    case CHECKOUT_SUCCESS:
+      return {
+        addedIds: [],
+        quantityById: {},
+      };
     default:
       return state;
   }
@@ -48,7 +54,6 @@ export const getAddedIds = (state) => state.addedIds;
 const cart = (state = initialState, action) => {
   switch (action.type) {
     case CHECKOUT_REQUEST:
-      console.log(action);
       return initialState;
     case CHECKOUT_FAILURE:
       return action.cart;

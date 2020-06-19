@@ -1,28 +1,33 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Product from './Product'
+import React from "react";
+import PropTypes from "prop-types";
+import Product from "./Product";
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
-  <div style={{ marginBottom: 20 }}>
+  <div className="card">
     <Product
       title={product.title}
       price={product.price}
-      quantity={product.inventory} />
-    <button
+      quantity={product.inventory}
+    />
+
+    <a
+      href="#"
+      className="btn btn-primary"
       onClick={onAddToCartClicked}
-      disabled={product.inventory > 0 ? '' : 'disabled'}>
-      {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-    </button>
+      disabled={product.inventory > 0 ? "" : "disabled"}
+    >
+      {product.inventory > 0 ? "Add to cart" : "Sold Out"}
+    </a>
   </div>
-)
+);
 
 ProductItem.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    inventory: PropTypes.number.isRequired
+    inventory: PropTypes.number.isRequired,
   }).isRequired,
-  onAddToCartClicked: PropTypes.func.isRequired
-}
+  onAddToCartClicked: PropTypes.func.isRequired,
+};
 
-export default ProductItem
+export default ProductItem;

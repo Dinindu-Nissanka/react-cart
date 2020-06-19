@@ -43,12 +43,33 @@ export const checkout = (products) => (dispatch, getState) => {
   dispatch({
     type: types.CHECKOUT_REQUEST,
   });
-  shop.buyProducts(products, () => {
-    dispatch({
-      type: types.CHECKOUT_SUCCESS,
-      cart,
-    });
-    // Replace the line above with line below to rollback on failure:
-    // dispatch({ type: types.CHECKOUT_FAILURE, cart })
+  axios
+    .post("http://localhost:8080/api/orders", {
+      products: products,
+    })
+    .then(
+      (res) => {
+        console.log(res.data);
+        dispatch({
+          type: types.CHECKOUT_SUCCESS,
+          cart,
+        });
+        dispatch(getAllOrders());
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+};
+
+const receiveOrders = (orders) => ({
+  type: types.RECEIVE_ORDERS,
+  orders,
+});
+
+export const getAllOrders = () => (dispatch) => {
+  axios.get("http://localhost:8080/api/orders").then((res) => {
+    console.log(res.data);
+    dispatch(receiveOrders(res.data));
   });
 };
