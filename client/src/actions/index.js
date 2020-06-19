@@ -1,5 +1,4 @@
 import axios from "axios";
-import shop from "../api/shop";
 import * as types from "../constants/ActionTypes";
 
 const receiveProducts = (products) => ({
