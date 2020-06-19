@@ -1,0 +1,15 @@
+Fri, 19 Jun 2020 09:27:51 GMT | INFO | app.log | Server is running on port 8080. | 
+Fri, 19 Jun 2020 09:32:29 GMT | INFO | app.log | Server is running on port 8080. | 
+Fri, 19 Jun 2020 09:32:29 GMT | INFO | app.log | Connected to the database! | 
+Fri, 19 Jun 2020 09:35:29 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:35:29 GMT | INFO | app.log | Connected to the database! 
+Fri, 19 Jun 2020 09:37:55 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:38:25 GMT | ERROR | app.log | Cannot connect to the database! | data:{"message":"connect ECONNREFUSED 127.0.0.1:27017","reason":{"type":"Single","setName":null,"maxSetVersion":null,"maxElectionId":null,"servers":{},"stale":false,"compatible":true,"compatibilityError":null,"logicalSessionTimeoutMinutes":null,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"commonWireVersion":null}} 
+Fri, 19 Jun 2020 09:42:43 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:42:43 GMT | INFO | app.log | Connected to the database! 
+Fri, 19 Jun 2020 09:46:41 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:46:41 GMT | INFO | app.log | Connected to the database! 
+Fri, 19 Jun 2020 09:48:09 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:48:09 GMT | INFO | app.log | Connected to the database! 
+Fri, 19 Jun 2020 09:48:46 GMT | INFO | app.log | Server is running on port 8080. 
+Fri, 19 Jun 2020 09:48:46 GMT | INFO | app.log | Connected to the database! 
