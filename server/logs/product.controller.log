@@ -1,3 +1,0 @@
-Fri, 19 Jun 2020 09:43:21 GMT | ERROR | product.controller.log | Content can not be empty! | data:{"price":800.01,"inventory":3} 
-Fri, 19 Jun 2020 09:48:12 GMT | INFO | product.controller.log | Product creation was successful | data:[{"title":"iphone 6s","price":500.01,"inventory":3,"createdAt":"2020-06-19T07:28:49.448Z","updatedAt":"2020-06-19T07:28:49.448Z","id":"5eec6931c005a811c5485f7d"},{"title":"iphone 7s","price":800.01,"inventory":3,"createdAt":"2020-06-19T07:59:09.781Z","updatedAt":"2020-06-19T07:59:09.781Z","id":"5eec704dc005a811c5485f7e"}] 
-Fri, 19 Jun 2020 09:48:48 GMT | INFO | product.controller.log | Product creation was successful 
